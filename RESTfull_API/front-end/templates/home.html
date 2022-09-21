@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <title>Home</title>
+</head>
+
+<body>
+    <h1 class="heading"> Book Management </h1>
+    <button class="btn" id="home">Home</button>
+    <table id="response"></table>
+    <div class="container">
+        <form action="#">
+
+            <label for="fname">Book name</label>
+            <input type="text" id="fname" name="name" placeholder="Book name...">
+
+            <label for="lname">Page Count</label>
+            <input type="number" id="lname" name="page-count" placeholder="Page count...">
+
+            <label for="author">Author</label>
+            <select id="author" name="author"></select>
+
+            <label for="category">Category</label>
+            <select id="category" name="category"></select>
+
+            <input type="submit" value="Create" id="create">
+            <input type="submit" value="Update" id="update">
+            <input type="submit" value="Delete" id="delete">
+            <input type="button" value="Find" id="find">
+
+        </form>
+    </div>
+    <table id="book-block"></table>
+    <script type="text/javascript" src="{{url_for('static', filename='scripts/callAPI.js')}}">
+
+    </script>
+</body>
+
+</html>
